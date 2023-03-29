@@ -26,7 +26,11 @@ end
 def find_waldo
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
 
-    # Your code goes here
+    words.find do |word|
+        word == "waldo"
+    end
+
+      
 
     # expected return value is "waldo"
 end
@@ -89,7 +93,7 @@ end
 
 # p find_first_seven_letter_word
 # p no_waldo
-# p find_waldo
+p find_waldo
 # p cannot_find_3_letter_words
 # p find_13
 # p find_first_even_number
