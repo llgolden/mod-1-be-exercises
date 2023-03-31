@@ -55,6 +55,7 @@ RSpec.describe 'Hashes' do
     # default values of zero
     # create a "tomatoes" key and a :carrots key
     ingredients = Hash.new(0) 
+
     expect(ingredients["tomatoes"]).to eq(0)
     expect(ingredients[:carrots]).to eq(0)
   end
@@ -165,11 +166,13 @@ RSpec.describe 'Hashes' do
     # change the value associated with
     # :John_Steinbeck to "Of Mice and Men"
     
-    books2 = {
-      John_Steinbeck: "Of Mice and Men",
-      Harper_Lee: "To Kill a Mockingbird"
-    }
-    books.merge!(books2)
+    # books2 = {
+    #   John_Steinbeck: "Of Mice and Men",
+    #   Harper_Lee: "To Kill a Mockingbird"
+    # }
+    # books.merge!(books2)
+    #OR
+    books[:John_Steinbeck]="Of Mice and Men"
 
     expected =  {
       John_Steinbeck: "Of Mice and Men",
