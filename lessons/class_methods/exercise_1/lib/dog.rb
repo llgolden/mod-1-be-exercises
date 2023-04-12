@@ -1,4 +1,4 @@
-#require 'barkable'
+require 'barkable'
 require 'pry'
 
 class Dog
@@ -8,7 +8,7 @@ class Dog
   def initialize(name)
     @name = name
     @number_of_woofs = 0
-    #binding.pry ## What will the @name property be?
+    #binding.pry ## What will the @name property be? the name being passed in through the argument
   end
 
   def bark
@@ -18,8 +18,8 @@ class Dog
 
   def woof
     #binding.pry ## When calling .woof on a Dog class, will this pry be hit?
+    @number_of_woofs += 1 #switched lines 21 and 22 to make test run successfully
     "Woof!"
-    @number_of_woofs += 1
   end
 
   def self.woof
