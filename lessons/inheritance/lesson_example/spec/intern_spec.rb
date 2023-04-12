@@ -27,8 +27,25 @@ RSpec.describe Intern do
   end
 
   describe "Ability to have name and ID, like any other Employee" do
-    # Write tests to prove that an Intern can be an Employee, with name and ID.
-    # The Intern should also have the ability to have the "sick_leave" benefit, and not just the one it starts with. 
+    it "can bring in attributes from Employee" do
+      intern1 = Intern.new(5, "Garrett III", 3)
+  
+        # expect(intern1).to be_a(Employee)
+        # Specific syntax for ensuring we've inherited correctly...
+      expect(intern1.is_a?(Employee)).to eq(true)
+      expect(intern1.name).to eq("Garrett III")
+      expect(intern1.id).to eq(3)
+        # Write tests to prove that an Intern can be an Employee, with name and ID.
+        # The Intern should also have the ability to have the "sick_leave" benefit, and not just the one it starts with. 
+    end
+     
+    it "has sick leave benefits as well" do
+      intern1 = Intern.new(5, "Garrett III", 3)
+        
+      expect(intern1.benefits).to eq([:sick_leave, :gets_to_get_me_coffee])
+    end
   end
-
+   # Write tests to prove that an Intern can be an Employee, with name and ID.
+    # The Intern should also have the ability to have the "sick_leave" benefit, and not just the one it starts with. 
+  
 end

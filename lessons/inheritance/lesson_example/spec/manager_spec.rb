@@ -28,8 +28,20 @@ RSpec.describe Manager do
     end
   end
 
+
   describe "Ability to have name and ID, like any other Employee" do
+    it "brings in Employee attributes" do
+      manager1 = Manager.new(12, "Lauren", 5)
+  
+      expect(manager1.is_a?(Employee)).to be true
+      expect(manager1.name).to eq("Lauren")
+      expect(manager1.id).to eq(5)
+      expect(manager1.base_salary).to eq(12)
+      expect(manager1.total_compensation).to eq(17)
+    end
+      # Write tests to prove that a Manager instance can have a Name and ID number, like any other Employee.
+      # Also, a Manager should be able to receive a total compensation. Write at least one test that proves they can access this method.
+  end
     # Write tests to prove that a Manager instance can have a Name and ID number, like any other Employee.
     # Also, a Manager should be able to receive a total compensation. Write at least one test that proves they can access this method.
-  end
 end

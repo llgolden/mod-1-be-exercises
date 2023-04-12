@@ -4,11 +4,15 @@ class Painter
 
   def initialize(name)
     @name = name
-    @paints = []
+    @paints = paints
   end
 
   def greeting
     "Hello, I'm #{name}"
+  end
+
+  def paints
+    @paints = []
   end
 
   def get_paints

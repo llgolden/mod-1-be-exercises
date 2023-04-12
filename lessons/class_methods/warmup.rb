@@ -17,6 +17,17 @@ puts sam.say_hello
 User.say_hello
 
 # 4. How can we access a method in our class that can say hello to someone WITHOUT instantiating a new object?
-# ...
+# => created the class method and call self.method (self.say_hello) 
 
 
+# # Use Class Methods when:
+# - When we want to look through all the instances of a class
+# - When we don’t necessarily want to go through every instance one by one
+# - When we don’t want to instantiate an object
+
+
+# # Exploration: 
+# What happens if you create a class method and an instance method with the same name?
+# What happens if you call an instance method from within a class method?
+# What about a class method from within another class method?
+# How would you explain the difference between class and instance methods to someone else?
