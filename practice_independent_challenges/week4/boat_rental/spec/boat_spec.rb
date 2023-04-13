@@ -20,7 +20,9 @@ RSpec.describe Boat do
 
     expect(kayak.hours_rented).to eq(0)
     kayak.add_hour
+    expect(kayak.hours_rented).to eq(1)
     kayak.add_hour
+    expect(kayak.hours_rented).to eq(2)
     kayak.add_hour
     expect(kayak.hours_rented).to eq(3)
   end
