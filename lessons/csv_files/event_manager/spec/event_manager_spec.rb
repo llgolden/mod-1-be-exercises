@@ -4,27 +4,24 @@ require './lib/attendee'
 require './lib/event_manager'
 require "csv"
 
-describe EventManager do
+RSpec.describe EventManager do
+  describe "#even attendee csv" do
 
-  before :each do
-  File.read "event_attendees.csv"
-  #   emanager = CSV.open "event_attendees.csv", headers: true, header_converters: :symbol
+    before(:each) do
+      @event = EventManager.new("./data/event_attendees.csv")
+    end
+
+    it "exists" do
+      expect(event).to be_an(EventManager)
+    end
+
+    xit "can identify attendees names" do 
+
+  require 'pry'; binding.pry
+      expect(emanager.name_finder).to eq(["Allison"])
+    end 
+
   end
-
-  it "exists" do
-    emanager = 
-    # File.exist? "event_attendees.csv"
-    expect(emanager).to be_a(File)
-
-  end
-
-  xit "can identify attendees names" do 
-
-require 'pry'; binding.pry
-    expect(emanager.name_finder).to eq(["Allison"])
-  end 
-
-  
 end
 
 
