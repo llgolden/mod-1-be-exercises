@@ -5,7 +5,7 @@ class EventManager
 
   def initialize(csv)
     @attendees = (CSV.open csv, headers: true, header_converters: :symbol).map do |row|
-      attendee= Attendee.new(
+      attendee = Attendee.new(
         row[:id], 
         row[:first_name], 
         row[:last_name], 

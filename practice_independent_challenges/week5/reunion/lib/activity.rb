@@ -27,5 +27,3 @@ class Activity
     each_owed
   end
 end 
-
-# For the `owed` method, the amount each person owes is the difference between what they paid and the `split`. If a participant paid less than their fair share they owe a positive amount. If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).

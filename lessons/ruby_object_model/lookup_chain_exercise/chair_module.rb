@@ -1,7 +1,7 @@
 module ChairModule
 
-  def soft
-    "module"
-  end
+  # def soft
+  #   "module"
+  # end
 
 end

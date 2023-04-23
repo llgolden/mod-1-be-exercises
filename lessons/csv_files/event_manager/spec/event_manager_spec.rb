@@ -5,7 +5,7 @@ require './lib/event_manager'
 require "csv"
 
 RSpec.describe EventManager do
-  describe "#even attendee csv" do
+  describe "#event attendee csv" do
 
     before(:each) do
       @event = EventManager.new("./data/event_attendees.csv")
