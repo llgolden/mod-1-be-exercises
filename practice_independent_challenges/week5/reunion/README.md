@@ -1,14 +1,5 @@
 # Reunion
 
-## Setup
-
-* Fork this Repository
-* Clone YOUR fork
-* Complete the activity below
-* Push your solution to your fork
-* Submit a pull request from your repository to the turingschool-examples repository
-  * Make sure to put your name in your PR!
-
 ## Tasks
 
 We're developing a small application to split expenses after a group of friends get together for a reunion. This will track how much each person spent on a particular activity, how much each person owed, and ultimately print out a summary of how much each person owes or is owed. Use tests to drive your development.
