@@ -1,13 +1,5 @@
 ## Instructions
 
-* Fork this Repository
-* Clone your forked repo to your computer.
-* Complete the activity below.
-* COMMIT YOUR TESTS FIRST! We will check for TDD via your git history.
-* Push your solution to your forked repo
-* Submit a pull request from your repository to this repository
-* Put your name in your PR!
-
 ### Iteration 1
 
 Use TDD to create a `Game` and `Contestant` class that respond to the following interaction pattern:
