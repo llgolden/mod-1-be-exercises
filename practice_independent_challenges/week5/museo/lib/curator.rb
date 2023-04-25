@@ -69,22 +69,24 @@ class Curator
     end
     artists_photos
   end
+  
+  def artists_with_multiple_photographs
+    all_artists = []
+    artist_mult_photos = []
+    photographs.each do |photo|
+      all_artists << photo.artist_id
+    end
+    all_artists.each do |artist|
+      artist_mult_photos << artist if all_artists.count(artist) > 1  
+    end
+    artist_name = [@artists.find {|artist| artist.id == artist_mult_photos[0]}.name]
+  end
 
-    # hash[:new_key] = hash.delete :old_key
-
-# iterate through the array of artists and each artist object = key
-# iterate through the array of photographs and 
-
-def artists_with_multiple_photographs
-
-end
-
+  def photographs_taken_by_artist_from(country)
+    @photographs.select do |photo|
+      artist = @artists.find { |artist| artist.id == photo.artist_id }
+      artist.country == country
+    end
+  end
 
 end #final
-
-
-
-# * `photographs_by_artist` - This method will return a hash with artists as keys, and an array of their photographs as values.
-# * `artists_with_multiple_photographs` - This method returns an Array of names of artists who have more than one photograph
-# * `photographs_taken_by_artists_from(string)` - This method takes a String representing a country. It returns an Array of `Photograph`s that were taken by a photographer from that country.
-
