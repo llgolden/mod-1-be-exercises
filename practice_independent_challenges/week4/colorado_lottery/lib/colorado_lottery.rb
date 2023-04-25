@@ -10,6 +10,7 @@ class ColoradoLottery
   end
 
   def interested_and_18?(contestant, game)
+    # require 'pry'; binding.pry
     if contestant.age >= 18 && contestant.game_interests.include?(game.name)
       true
     else
@@ -25,9 +26,14 @@ class ColoradoLottery
     end
   end
 
-  # - A contestant #can_register? if they are interested in the game, 18 years of age or older, and they are either a Colorado resident or this is a national game
-  
+  def register_contestant(contestant, game)
+      registered_contestants[game.name] = [].push(contestant)
+  end
+
+
+
 end
 
-
-
+# - We will only register contestants that `#can_register?`
+# - `#eligible_contestants` is a list of all the contestants who have been registered to play a given game and that have more spending_money than the cost.
+# - current_contestants are lists of contestant names who have been charged, organized by game.
